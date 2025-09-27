@@ -7,7 +7,7 @@
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
-    background-color: #f5f5f5;
+    background-color: #FFFFFF; /* Виправлено на #FFFFFF згідно з фінальною вимогою */
     margin: 0;
 }
 
@@ -20,6 +20,26 @@ ul, ol {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Прихований заголовок */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* --- Контейнер (Обмеження ширини та центрування) --- */
@@ -162,14 +182,10 @@ section h2 {
     text-transform: capitalize; 
 }
 
-/* --- Секція 2: VALUES (Переваги) --- */
-/* Стилі для горизонтального розташування */
-section:nth-child(2) .container ul {
-    display: flex;
-    gap: 24px;
-}
-/* Стилі для заголовків <h3> у "Values" */
-section:nth-child(2) ul li h3 { 
+/* Стилі для заголовків h3 у "Values" та "Team" */
+.values-title,
+.team-member-title,
+.portfolio-item-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -179,46 +195,10 @@ section:nth-child(2) ul li h3 {
     margin-bottom: 8px;
 }
 
-/* Стилі для параграфів у "Values" */
-section:nth-child(2) ul li p { 
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    margin: 0;
-}
-
-/* --- Секція 3: TEAM (Команда) --- */
-.team-section { 
-    background-color: #F4F4FD;
-}
-/* Стилі для горизонтального розташування та центривання карток */
-.team-section .container ul {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-}
-/* Картка члена команди */
-.team-section .container ul li { 
-    background-color: #FFFFFF;
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-                0px 1px 1px rgba(46, 47, 66, 0.16), 
-                0px 2px 1px rgba(46, 47, 66, 0.08);
-    text-align: center;
-    padding-bottom: 32px;
-}
-/* Заголовок імені (h3) */
-.team-section ul li h3 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-top: 32px;
-    margin-bottom: 8px;
-}
-/* Параграф посади (p) */
-.team-section ul li p {
+/* Стилі для параграфів p у "Values" та "Portfolio" */
+.values-text,
+.team-member-text,
+.portfolio-item-text { 
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -227,10 +207,47 @@ section:nth-child(2) ul li p {
 }
 
 
+/* --- Секція 2: VALUES (Переваги) --- */
+.values-section .container ul {
+    display: flex;
+    gap: 24px;
+}
+
+
+/* --- Секція 3: TEAM (Команда) --- */
+.team-section { 
+    background-color: #F4F4FD;
+}
+
+.team-section .container ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.team-card { 
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+    text-align: center;
+    /* Виправлення відступів */
+    padding-bottom: 32px; 
+}
+
+.team-card .card-content {
+    padding-top: 32px;
+}
+
+.team-member-text {
+    /* Параграф у команді може наслідувати, але додамо для ясності */
+    margin: 0; 
+}
+
+
 /* --- Секція 4: PORTFOLIO (Наше Портфоліо) --- */
 .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
     background-color: #fff;
 }
 
@@ -247,23 +264,16 @@ section:nth-child(2) ul li p {
     border: 1px solid #e7e9fc;
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
-    /* АНІМАЦІЯ: плавний перехід для тіні та підняття */
+    /* АНІМАЦІЯ */
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), 
                 transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
-    /* Ефект при наведенні: тінь та підняття */
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 
                 0px 1px 6px rgba(0, 0, 0, 0.12), 
                 0px 1px 1px rgba(0, 0, 0, 0.14);
     transform: translateY(-5px); 
-}
-
-.portfolio-item img {
-    display: block;
-    width: 100%;
-    height: auto;
 }
 
 .portfolio-card-content {
@@ -274,28 +284,17 @@ section:nth-child(2) ul li p {
 }
 
 
-.portfolio-item-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-.portfolio-item-text {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    margin: 0;
-}
-
 /* --- Футер (Підвал сайту) --- */
 .page-footer {
     background-color: #2e2f42;
     padding: 100px 0;
+}
+
+.page-footer .container {
+    /* Додамо flex, якщо елементи мають бути поруч, або залиште для мобільної верстки */
+    display: flex;
+    align-items: baseline; /* Для вирівнювання за нижньою лінією */
+    gap: 120px; /* Приблизний відступ між логотипом та параграфом */
 }
 
 .page-footer .logo {
@@ -303,21 +302,14 @@ section:nth-child(2) ul li p {
     margin-bottom: 16px;
 }
 
-/* Перевизначаємо колір для частини "Studio" у футері */
 .footer-logo {
-    color: var(--light-color); 
-}
-
-/* Забезпечуємо, щоб частина "Web" мала колір #4d5ae5 */
-.page-footer .logo .logo-art {
-    color: inherit; 
+    color: var(--light-color); /* #f4f4fd */
 }
 
 .footer-text {
     color: var(--light-color);
     max-width: 264px;
     margin-top: 0;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
