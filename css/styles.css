@@ -1,0 +1,271 @@
+/* --- Загальні стилі та скидання (Reset) --- */
+body {
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Контейнер (Обмеження ширини та центрування) --- */
+.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* --- Логотип --- */
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    color: #4d5ae5;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.logo-art {
+    color: #2e2f42; /* Темний колір для частини логотипу в хедері */
+}
+
+
+/* --- Хедер (Шапка сайту) --- */
+.page-header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.page-header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 72px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+    margin-left: 76px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding: 24px 0;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts {
+    font-style: normal;
+}
+
+.contacts-list {
+    display: flex;
+    gap: 40px;
+}
+
+.contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ефекти наведення (Hover/Focus) */
+.nav-link:hover,
+.nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus {
+    color: #404bbf;
+}
+
+
+/* --- Секція Головної сторінки (Hero Section) --- */
+.main-page {
+    background-color: #2e2f42;
+    padding: 188px 0;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: #fff;
+    max-width: 496px;
+    margin: 0 auto 48px;
+}
+
+.main-page button {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background-color: #4d5ae5;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-page button:hover,
+.main-page button:focus {
+    background-color: #404bbf;
+}
+
+
+/* --- Секції MAIN (Загальні стилі) --- */
+main section {
+    padding: 120px 0;
+}
+
+section h2 { /* Спільний стиль для заголовків секцій "Team" та "Portfolio" */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-top: 0;
+    margin-bottom: 72px;
+}
+
+.container > ul { /* Список елементів у секціях "Values" та "Team" */
+    display: flex;
+    gap: 24px;
+}
+
+.container li h3 { /* Стилі для заголовків <h3> у "Values" та "Team" */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.container li p { /* Стилі для параграфів у "Values" та "Team" */
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+/* --- Секція TEAM (Команда) --- */
+section:nth-child(3) { /* Виділяємо секцію "Team" */
+    background-color: #F4F4FD;
+}
+
+section:nth-child(3) ul li h3 {
+    margin-top: 32px; /* Відступ від зображення */
+}
+
+
+/* --- Секція PORTFOLIO (Наше Портфоліо) --- */
+.portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #fff; /* Білий фон */
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-item {
+    width: calc((100% - 2 * 24px) / 3); 
+    background-color: #fff;
+    border: 1px solid #e7e9fc;
+    border-radius: 0px 0px 4px 4px;
+    overflow: hidden;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-card-content {
+    padding: 32px 16px; 
+    border: 1px solid #e7e9fc; 
+    border-top: none; 
+    background-color: #fff;
+}
+
+
+.portfolio-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.portfolio-item-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    margin: 0;
+}
+
+/* --- Футер (Підвал сайту) --- */
+.page-footer {
+    background-color: #2e2f42;
+    padding: 100px 0;
+}
+
+.page-footer .logo {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.page-footer .logo .logo-art { /* Відміна стилю header-logo-art для футера */
+    color: inherit;
+}
+
+.footer-logo {
+    color: #f4f4fd; /* Світлий колір для частини "Studio" */
+}
+
+.footer-text {
+    color: #f4f4fd;
+    max-width: 264px;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
