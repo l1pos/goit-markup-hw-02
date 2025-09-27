@@ -1,3 +1,8 @@
+/* Додаємо CSS-змінну у кореневий елемент */
+:root {
+    --light-color: #f4f4fd; 
+}
+
 /* --- Загальні стилі та скидання (Reset) --- */
 body {
     font-family: "Roboto", sans-serif;
@@ -27,8 +32,8 @@ a {
 /* --- Логотип --- */
 .logo {
     font-family: "Raleway", sans-serif;
-    font-size: 18px;
     font-weight: 700;
+    font-size: 18px;
     line-height: 1.17;
     color: #4d5ae5;
     text-transform: uppercase;
@@ -100,7 +105,7 @@ a {
 }
 
 
-/* --- Секція Головної сторінки (Hero Section) --- */
+/* --- Секція 1: Головна сторінка (Hero Section) --- */
 .main-page {
     background-color: #2e2f42;
     padding: 188px 0;
@@ -135,7 +140,7 @@ h1 {
 
 .main-page button:hover,
 .main-page button:focus {
-    background-color: #404bbf;
+    background-color: #404bbf; /* Колір при наведенні */
 }
 
 
@@ -154,9 +159,10 @@ section h2 {
     color: #2e2f42;
     margin-top: 0;
     margin-bottom: 72px;
+    text-transform: capitalize; 
 }
 
-/* --- Секція VALUES (Переваги) --- */
+/* --- Секція 2: VALUES (Переваги) --- */
 /* Стилі для горизонтального розташування */
 section:nth-child(2) .container ul {
     display: flex;
@@ -181,18 +187,18 @@ section:nth-child(2) ul li p {
     margin: 0;
 }
 
-/* --- Секція TEAM (Команда) --- */
-section:nth-child(3) { 
+/* --- Секція 3: TEAM (Команда) --- */
+.team-section { 
     background-color: #F4F4FD;
 }
 /* Стилі для горизонтального розташування та центривання карток */
-section:nth-child(3) .container ul {
+.team-section .container ul {
     display: flex;
     justify-content: center;
     gap: 24px;
 }
 /* Картка члена команди */
-section:nth-child(3) ul li { 
+.team-section .container ul li { 
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
@@ -202,7 +208,7 @@ section:nth-child(3) ul li {
     padding-bottom: 32px;
 }
 /* Заголовок імені (h3) */
-section:nth-child(3) ul li h3 {
+.team-section ul li h3 {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -212,7 +218,7 @@ section:nth-child(3) ul li h3 {
     margin-bottom: 8px;
 }
 /* Параграф посади (p) */
-section:nth-child(3) ul li p {
+.team-section ul li p {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -221,7 +227,7 @@ section:nth-child(3) ul li p {
 }
 
 
-/* --- Секція PORTFOLIO (Наше Портфоліо) --- */
+/* --- Секція 4: PORTFOLIO (Наше Портфоліо) --- */
 .portfolio {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -297,19 +303,20 @@ section:nth-child(3) ul li p {
     margin-bottom: 16px;
 }
 
-.page-footer .logo .logo-art {
-    color: inherit;
+/* Перевизначаємо колір для частини "Studio" у футері */
+.footer-logo {
+    color: var(--light-color); 
 }
 
-.footer-logo {
-    color: #f4f4fd; /* Світлий колір для частини "Studio" */
+/* Забезпечуємо, щоб частина "Web" мала колір #4d5ae5 */
+.page-footer .logo .logo-art {
+    color: inherit; 
 }
 
 .footer-text {
-    color: #f4f4fd;
+    color: var(--light-color);
     max-width: 264px;
     margin-top: 0;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
