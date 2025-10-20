@@ -86,7 +86,7 @@ a {
 .hero-section {
     background-color: var(--secondary-text-color);
     font-size: 16px;
-    /* ВИПРАВЛЕНО: Додано letter-spacing до батьківської секції */
+    /* ВИПРАВЛЕНО: letter-spacing перенесено до батьківського класу */
     letter-spacing: 0.04em;
 }
 
@@ -94,7 +94,7 @@ a {
     color: var(--white-background);
     font-size: 56px;
     line-height: 1.07;
-    /* letter-spacing тут залишився 0.02em, оскільки він має перекривати успадковане 0.04em */
+    /* Перепризначаємо letter-spacing назад для заголовка */
     letter-spacing: 0.02em;
     text-align: center;
 }
@@ -104,7 +104,7 @@ a {
     color: var(--white-background);
     font-weight: 500;
     line-height: 1.5;
-    /* letter-spacing: 0.04em; -- ВИДАЛЕНО, тепер успадковується від .hero-section */
+    /* letter-spacing: 0.04em; -- ВИДАЛЕНО, тепер успадковується */
     cursor: pointer;
     border: none;
     font-family: 'Roboto', sans-serif;
