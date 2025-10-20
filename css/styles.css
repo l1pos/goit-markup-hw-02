@@ -89,14 +89,15 @@ img {
 .hero-section {
   background-color: var(--secondary-text-color);
   font-size: 16px;
-  letter-spacing: 0.04em;
+  /* ВИПРАВЛЕНО: Видалено letter-spacing, щоб не створювати конфлікт успадкування */
 }
 
 .hero-title {
   color: var(--white-background);
   font-size: 56px;
   line-height: 1.07;
-  letter-spacing: 0.04em; 
+  /* Явно задаємо 0.02em */
+  letter-spacing: 0.02em; 
   text-align: center;
 }
 
@@ -109,6 +110,8 @@ img {
   border: none;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  /* ВИПРАВЛЕНО: Явно задаємо 0.04em, щоб уникнути inherit */
+  letter-spacing: 0.04em; 
 }
 
 .order-button:hover,
