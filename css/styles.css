@@ -32,8 +32,6 @@ ul {
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 0;
-  /* padding-left був потрібен для скидання стилів браузера, але залишаємо для чистоти */
-  padding-left: 0;
 }
 
 a {
@@ -42,8 +40,6 @@ a {
 }
 
 img {
-  /* display: block; залишаємо, оскільки це важливо для зображень у потік */
-  display: block;
 }
 
 .logo {
@@ -106,7 +102,6 @@ img {
   letter-spacing: 0.04em;
   cursor: pointer;
   border: none;
-  /* border-radius: 4px; видалено */
 }
 
 .order-button:hover,
@@ -137,7 +132,6 @@ img {
 
 .team-member-card {
   background-color: var(--white-background);
-  /* box-shadow видалено */
 }
 
 .team-member-name {
