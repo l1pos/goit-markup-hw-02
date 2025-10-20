@@ -1,20 +1,38 @@
-/* Додаємо CSS-змінну у кореневий елемент */
 :root {
-    --light-color: #f4f4fd; 
+    --primary-text-color: #434455;
+    --secondary-text-color: #2e2f42;
+    --accent-color: #4d5ae5;
+    --pressed-state-color: #404bbf;
+    --white-background: #ffffff;
+    --light-background: #f4f4fd;
+    --logo-dark-color: #2e2f42;
+    --footer-text-color: #e7e9fc;
 }
 
-/* --- Загальні стилі та скидання (Reset) --- */
 body {
-    font-family: "Roboto", sans-serif;
-    color: #434455;
-    background-color: #FFFFFF; /* Виправлено на #FFFFFF згідно з фінальною вимогою */
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--white-background);
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-ul, ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 a {
@@ -24,292 +42,136 @@ a {
 
 img {
     display: block;
-    max-width: 100%;
-    height: auto;
 }
 
-/* Прихований заголовок */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-/* --- Контейнер (Обмеження ширини та центрування) --- */
-.container {
-    width: 1158px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-/* --- Логотип --- */
 .logo {
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
-    color: #4d5ae5;
-    text-transform: uppercase;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-color);
 }
 
-.logo-art {
-    color: #2e2f42; /* Темний колір для частини логотипу в хедері */
-}
-
-
-/* --- Хедер (Шапка сайту) --- */
-.page-header {
-    border-bottom: 1px solid #e7e9fc;
-}
-
-.page-header .container {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    height: 72px;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list {
-    display: flex;
-    gap: 40px;
-    margin-left: 76px;
+.logo-dark {
+    color: var(--logo-dark-color);
 }
 
 .nav-link {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
+    color: var(--secondary-text-color);
     letter-spacing: 0.02em;
-    color: #2e2f42;
-    padding: 24px 0;
-    display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts {
-    font-style: normal;
-}
-
-.contacts-list {
-    display: flex;
-    gap: 40px;
-}
-
-.contacts-link {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Ефекти наведення (Hover/Focus) */
 .nav-link:hover,
-.nav-link:focus,
-.contacts-link:hover,
-.contacts-link:focus {
-    color: #404bbf;
+.nav-link:focus {
+    color: var(--pressed-state-color);
 }
 
-
-/* --- Секція 1: Головна сторінка (Hero Section) --- */
-.main-page {
-    background-color: #2e2f42;
-    padding: 188px 0;
-    text-align: center;
+.current-link {
+    color: var(--pressed-state-color);
 }
 
-h1 {
-    font-weight: 700;
+.contact-link {
+    font-style: normal;
+    color: var(--primary-text-color);
+    letter-spacing: 0.02em;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--pressed-state-color);
+}
+
+.hero-section {
+    background-color: var(--secondary-text-color);
+}
+
+.hero-title {
+    color: var(--white-background);
     font-size: 56px;
     line-height: 1.07;
+    text-align: center;
     letter-spacing: 0.02em;
-    color: #fff;
-    max-width: 496px;
-    margin: 0 auto 48px;
 }
 
-.main-page button {
-    cursor: pointer;
+.order-button {
+    background-color: var(--accent-color);
+    color: var(--white-background);
     font-weight: 500;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    color: #fff;
-    background-color: #4d5ae5;
+    cursor: pointer;
     border: none;
     border-radius: 4px;
-    padding: 16px 32px;
-    min-width: 169px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-page button:hover,
-.main-page button:focus {
-    background-color: #404bbf; /* Колір при наведенні */
+.order-button:hover,
+.order-button:focus {
+    background-color: var(--pressed-state-color);
 }
 
-
-/* --- Секції MAIN (Загальні стилі) --- */
-main section {
-    padding: 120px 0;
-}
-
-/* Загальний стиль для заголовків секцій "Team" та "Portfolio" */
-section h2 { 
-    font-weight: 700;
+.section-title {
     font-size: 36px;
     line-height: 1.11;
-    letter-spacing: 0.02em;
     text-align: center;
-    color: #2e2f42;
-    margin-top: 0;
-    margin-bottom: 72px;
-    text-transform: capitalize; 
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--secondary-text-color);
 }
 
-/* Стилі для заголовків h3 у "Values" та "Team" */
-.values-title,
-.team-member-title,
-.portfolio-item-title {
+.features-list-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-top: 0;
-    margin-bottom: 8px;
+    color: var(--secondary-text-color);
 }
 
-/* Стилі для параграфів p у "Values" та "Portfolio" */
-.values-text,
-.team-member-text,
-.portfolio-item-text { 
-    font-size: 16px;
-    line-height: 1.5;
+.team-section {
+    background-color: var(--light-background);
+}
+
+.team-member-card {
+    background-color: var(--white-background);
+}
+
+.team-member-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
     letter-spacing: 0.02em;
-    color: #434455;
-    margin: 0;
-}
-
-
-/* --- Секція 2: VALUES (Переваги) --- */
-.values-section .container ul {
-    display: flex;
-    gap: 24px;
-}
-
-
-/* --- Секція 3: TEAM (Команда) --- */
-.team-section { 
-    background-color: #F4F4FD;
-}
-
-.team-section .container ul {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-}
-
-.team-card { 
-    background-color: #FFFFFF;
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-                0px 1px 1px rgba(46, 47, 66, 0.16), 
-                0px 2px 1px rgba(46, 47, 66, 0.08);
+    color: var(--secondary-text-color);
     text-align: center;
-    /* Виправлення відступів */
-    padding-bottom: 32px; 
 }
 
-.team-card .card-content {
-    padding-top: 32px;
+.team-member-position {
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
-.team-member-text {
-    /* Параграф у команді може наслідувати, але додамо для ясності */
-    margin: 0; 
+.portfolio-card-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
 }
 
-
-/* --- Секція 4: PORTFOLIO (Наше Портфоліо) --- */
-.portfolio {
-    background-color: #fff;
+.portfolio-card-category {
+    letter-spacing: 0.02em;
 }
 
-.portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
+.footer {
+    background-color: var(--secondary-text-color);
 }
 
-.portfolio-item {
-    width: calc((100% - 2 * 24px) / 3); 
-    background-color: #fff;
-    border: 1px solid #e7e9fc;
-    border-radius: 0px 0px 4px 4px;
-    overflow: hidden;
-    /* АНІМАЦІЯ */
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-item:hover {
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 
-                0px 1px 6px rgba(0, 0, 0, 0.12), 
-                0px 1px 1px rgba(0, 0, 0, 0.14);
-    transform: translateY(-5px); 
-}
-
-.portfolio-card-content {
-    padding: 32px 16px; 
-    border: 1px solid #e7e9fc; 
-    border-top: none; 
-    background-color: #fff;
-}
-
-
-/* --- Футер (Підвал сайту) --- */
-.page-footer {
-    background-color: #2e2f42;
-    padding: 100px 0;
-}
-
-.page-footer .container {
-    /* Додамо flex, якщо елементи мають бути поруч, або залиште для мобільної верстки */
-    display: flex;
-    align-items: baseline; /* Для вирівнювання за нижньою лінією */
-    gap: 120px; /* Приблизний відступ між логотипом та параграфом */
-}
-
-.page-footer .logo {
-    display: inline-block;
-    margin-bottom: 16px;
-}
-
-.footer-logo {
-    color: var(--light-color); /* #f4f4fd */
+.footer .logo-light {
+    color: var(--light-background);
 }
 
 .footer-text {
-    color: var(--light-color);
-    max-width: 264px;
-    margin-top: 0;
-    line-height: 1.5;
+    color: var(--footer-text-color);
     letter-spacing: 0.02em;
 }
