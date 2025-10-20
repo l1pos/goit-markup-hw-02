@@ -1,20 +1,20 @@
 :root {
-    --primary-text-color: #434455;
-    --secondary-text-color: #2e2f42;
-    --accent-color: #4d5ae5;
-    --pressed-state-color: #404bbf;
-    --white-background: #ffffff;
-    --light-background: #f4f4fd;
-    --logo-dark-color: #2e2f42;
-    --footer-text-color: #e7e9fc;
+  --primary-text-color: #434455;
+  --secondary-text-color: #2e2f42;
+  --accent-color: #4d5ae5;
+  --pressed-state-color: #404bbf;
+  --white-background: #ffffff;
+  --light-background: #f4f4fd;
+  --logo-dark-color: #2e2f42;
+  --footer-text-color: #e7e9fc;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--primary-text-color);
-    background-color: var(--white-background);
-    font-size: 16px;
-    line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--white-background);
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 h1,
@@ -24,162 +24,163 @@ h4,
 h5,
 h6,
 p {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul {
-    list-style-type: none;
-    margin-top: 0;
-    margin-bottom: 0;
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
 }
 
 .contact-info {
-    font-style: normal;
+  font-style: normal;
 }
 
 .logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--accent-color);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent-color);
 }
 
 .logo-dark {
-    color: var(--logo-dark-color);
+  color: var(--logo-dark-color);
 }
 
 .nav-link {
-    font-weight: 500;
-    color: var(--secondary-text-color);
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+  letter-spacing: 0.02em;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--pressed-state-color);
+  color: var(--pressed-state-color);
 }
 
 .current-link {
-    color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
 }
 
 .contact-link {
-    font-style: normal;
-    color: var(--primary-text-color);
-    letter-spacing: 0.02em;
+  font-style: normal;
+  color: var(--primary-text-color);
+  letter-spacing: 0.02em;
 }
 
 .contact-link:hover,
 .contact-link:focus {
-    color: var(--pressed-state-color);
+  color: var(--pressed-state-color);
 }
 
 .hero-section {
-    background-color: var(--secondary-text-color);
-    font-size: 16px;
-    /* ВИПРАВЛЕНО: letter-spacing перенесено до батьківського класу */
-    letter-spacing: 0.04em;
+  background-color: var(--secondary-text-color);
+  font-size: 16px;
+  letter-spacing: 0.04em;
 }
 
 .hero-title {
-    color: var(--white-background);
-    font-size: 56px;
-    line-height: 1.07;
-    /* Перепризначаємо letter-spacing назад для заголовка */
-    letter-spacing: 0.02em;
-    text-align: center;
+  color: var(--white-background);
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.04em; 
+  text-align: center;
 }
 
 .order-button {
-    background-color: var(--accent-color);
-    color: var(--white-background);
-    font-weight: 500;
-    line-height: 1.5;
-    /* letter-spacing: 0.04em; -- ВИДАЛЕНО, тепер успадковується */
-    cursor: pointer;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+  background-color: var(--accent-color);
+  color: var(--white-background);
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: inherit; 
 }
 
 .order-button:hover,
 .order-button:focus {
-    background-color: var(--pressed-state-color);
+  background-color: var(--pressed-state-color);
 }
 
 .section-title {
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--secondary-text-color);
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--secondary-text-color);
 }
 
 .features-list-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
 }
 
 .feature-text {
-    letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
 }
 
 .team-section {
-    background-color: var(--light-background);
+  background-color: var(--light-background);
 }
 
 .team-member-card {
-    background-color: var(--white-background);
+  background-color: var(--white-background);
 }
 
 .team-member-name {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
-    text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  text-align: center;
 }
 
 .team-member-position {
-    letter-spacing: 0.02em;
-    text-align: center;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .portfolio-card-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
 }
 
 .portfolio-card-category {
-    letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
 }
 
 .footer {
-    background-color: var(--secondary-text-color);
+  background-color: var(--secondary-text-color);
 }
 
 .footer .logo-light {
-    color: var(--light-background);
+  color: var(--light-background);
 }
 
 .footer-text {
-    color: var(--light-background);
-    letter-spacing: 0.02em;
+  color: var(--light-background);
+  letter-spacing: 0.02em;
 }
