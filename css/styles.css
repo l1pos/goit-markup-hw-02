@@ -169,6 +169,6 @@ img {
 }
 
 .footer-text {
-  color: var(--footer-text-color);
+  color: var(--light-background);
   letter-spacing: 0.02em;
 }
